@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Medicine</title>
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyEv1N75P9tpDqd2Mn9wr2I2tM6F5tr5t4" crossorigin="anonymous">
+</head>
+<style>
+    
+</style>
+
+<body>
+    <div class="container mt-5">
+        <h1>Delete Medicine</h1>
+        <p>Are you sure you want to delete this medicine?</p>
+        <form method="POST" action="/medicines/<%= medicine.id %>?_method=DELETE">
+            <button type="submit" class="btn btn-danger">Yes, Delete Medicine</button>
+        </form>
+        <a href="/medicines" class="btn btn-secondary mt-3">Cancel</a>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js CDN -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-XIv1Vb3uyhbo5jzjZB1hpKO9RmFX6eDhF3jCGtJsdf6zAkXrRc4NBkwD+Kp4czyVI"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyEv1N75P9tpDqd2Mn9wr2I2tM6F5tr5t4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

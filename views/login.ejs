@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<style>
+
+</style>
+<body>
+  <h1>Login</h1>
+  
+  <form id="login-form">
+    <hr>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+    <br><br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required> 
+    <br>
+    <br>
+    <br><button type="button" onclick="authenticate()" id="login">Login</button>
+</form>
+
+<script>
+    function authenticate() {
+        // Perform authentication logic here
+        // For demonstration purposes, let's assume authentication is successful
+        // You can replace the condition below with your actual authentication logic
+        var isAuthenticated = true;
+
+        if (isAuthenticated) {
+            // Redirect to /medicines
+            window.location.href = "/medicines";
+        } else {
+            // Handle authentication failure if needed
+            alert("Authentication failed. Please try again.");
+        }
+    }
+</script>
+
+  <p id="error-message" style="color: red;"></p>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expiry Alerts</title>
+    <!-- Link to Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<style>
+
+</style>
+
+<body class="container mt-4">
+    <h1 class="mb-4">Expiry Alerts</h1>
+    <a href="/medicines" class="btn btn-success mb-2">all medicines</a>
+    <ul class="list-group">
+        <% expiryAlerts.forEach(alert=> { %>
+            <li class="list-group-item">
+                <div class="d-flex justify-content-between align-items-center">
+                    <strong>
+                        <%= alert.Medicine.medicine_name %>
+                    </strong>
+                    <span class="badge badge-primary">
+                        <%= alert.status %>
+                    </span>
+                    <!-- Add delete button -->
+                    <form action="/delete/<%= alert.alert_id %>" method="delete"> <!-- Change method to "delete" -->
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+
+                </div>
+                <p class="mb-1"><strong>Expiry Date:</strong>
+                    <%= alert.expiry_date %>
+                </p>
+                <p class="mb-1"><strong>Alert Date:</strong>
+                    <%= alert.alert_date %>
+                </p>
+            </li>
+            <% }); %>
+    </ul>
+
+    <!-- Link to Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
